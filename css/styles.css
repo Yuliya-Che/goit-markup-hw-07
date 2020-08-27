@@ -1,0 +1,538 @@
+/*Добавляет задний фон секции для более легкого восприятия заголовка и кнопки*/
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+  max-width: 1600px;
+  height: 600px;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/img-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Стилизирует h1-заголовок страницы*/
+.page-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.364;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--total-white);
+}
+/*Стилизирует кнопку под h1-заголовком страницы*/
+.btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--total-white);
+  background-color: var(--accent-color);
+  border-width: 0px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px 32px;
+  min-width: 200px;
+
+  cursor: pointer;
+
+  outline: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Стилизирует кнопку Заказать услугу при hover и focus */
+.btn:hover,
+.btn:focus,
+.btn:active {
+  color: var(--accent-color);
+  background-color: var(--total-white);
+}
+
+.advantages,
+.team,
+.customers {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.services {
+  padding-bottom: 94px;
+}
+/* ТЕСТОВЫЙ ПСЕВДОКЛАСС */
+/* .advantages-item:first-child::before {
+  content: " ";
+  display: block;
+  background-color: grey;
+  background-image: url(../images/icons/sprite.svg#satellite);
+  width: 270px;
+} */
+
+/*Стилизирует h2-заголовки секции с преимуществами студии*/
+.advantages-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+.advantages-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.advantages-item {
+  width: 270px;
+}
+.advantages-item:not(:last-child) {
+  margin-right: 30px;
+}
+.advantages-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--light-background-color);
+  border-radius: 4px;
+}
+/*Стилизирует описание секции с преимуществами студии*/
+.advantages-description {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
+/*Стилизирует h2-заголовки секций с услугами, командой и клиентами студии*/
+.services-title,
+.team-title,
+.customers-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-color);
+}
+.services-list {
+  display: flex;
+}
+.services-item {
+  flex-wrap: wrap;
+  width: 370px;
+  margin-right: 30px;
+}
+.services-item:nth-child(3n) {
+  margin-right: 0;
+}
+/* Добавляет относительное позиционирование для наименования услуг */
+.services-thumb {
+  position: relative;
+}
+
+/*Стилизирует h3-заголовки секции с конкретизацией услуг студии*/
+.services-detalization {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--total-white);
+  background-color: rgba(47, 48, 58, 0.8);
+
+  /* Добавляет абсолютное позиционирование для наименования услуг */
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  bottom: 0;
+  left: 0;
+}
+/*Добавляет фон секции с командой студии*/
+.team {
+  background-color: var(--light-background-color);
+}
+.team-list {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+.team-item {
+  flex-wrap: wrap;
+  width: 270px;
+  margin-right: 30px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  background-color: var(--total-white);
+}
+.team-item:nth-child(4n) {
+  margin-right: 0;
+}
+/*Стилизирует h3-заголовки секции с именами членов команды студии*/
+.team-member-name {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1875;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-color);
+}
+/*Стилизирует текстовые р-элементы секции с должностями членов команды студии*/
+.team-member-position {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.1875;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
+/* Стилизирует иконки соцсетей членов команды */
+.socials-list {
+  display: flex;
+  justify-content: center;
+}
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+.social-icons-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--svg-color);
+  background-color: var(--total-white);
+  border-radius: 50%;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  color: var(--total-white);
+  background-color: var(--accent-color);
+}
+.social-icons-link:active {
+  color: var(--total-white);
+}
+
+.socials-item .social-icon {
+  fill: currentColor;
+}
+/* Работа с секцией постоянных клиентов */
+.customers-list {
+  display: flex;
+  align-items: center;
+}
+
+.customers-item {
+  width: calc((100% - 150px) / 6);
+  height: 90px;
+}
+
+.customers-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.customer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--svg-color);
+  border-radius: 4px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--svg-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customer-link:hover,
+.customer-link:focus,
+.customer-link:active {
+  border: 1px solid var(--accent-color);
+}
+
+/* Добавляет эффекты ховера и фокуса на иконки клиентов */
+.customer-link:hover .customer-icon,
+.customer-link:focus .customer-icon,
+.customer-link:active .customer-icon {
+  fill: var(--accent-color);
+}
+
+/* Добавляет модальное окно */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* z-index: 59; */
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 0;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 100%;
+  max-width: 528px;
+  height: 581px;
+  background-color: var(--total-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+
+  opacity: 1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--total-white);
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  background-color: var(--accent-color);
+}
+.btn-close-icon {
+  fill: var(--total-black);
+}
+
+.btn-close:hover .btn-close-icon {
+  fill: var(--total-white);
+}
+
+/* Стилизация формы заказа услуги */
+.modal-form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-title {
+  display: flex;
+  padding: 0;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-color);
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.form-field-label {
+  margin-bottom: 4px;
+  cursor: pointer;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: var(--secondary-color);
+}
+
+.form-field-svg {
+  position: relative;
+}
+.form-field-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-bottom: 11px;
+  padding-top: 11px;
+  padding-right: 12px;
+  padding-left: 42px;
+  margin-bottom: 10px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  resize: none;
+  outline: none;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-field-input:last-child {
+  margin-bottom: 20px;
+}
+.form-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-10px);
+  fill: var(--primary-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-field-input:hover + .form-field-icon,
+.form-field-input:focus + .form-field-icon {
+  fill: var(--accent-color);
+}
+
+.form-field-input:hover,
+.form-field-input:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.textarea {
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+}
+.textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox-label {
+  margin-bottom: 30px;
+}
+.checkbox {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.checkbox-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-left: 10px;
+}
+
+.checkbox-text > a {
+  display: inline-flexbox;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.checkbox-text::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+  vertical-align: text-top;
+  border: 2px solid var(--primary-color);
+  border-radius: 2px;
+  background-color: var(--total-white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked ~ .checkbox-text::before {
+  background-color: var(--accent-color);
+  background-image: url(../images/icons/icons-original/icon-check.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-color: var(--accent-color);
+}
+
+.modal-form button {
+  max-width: 200px;
+  align-self: center;
+  margin: 0;
+}
+
+.modal-form-button {
+  padding: 10px 56px;
+  min-width: 200px;
+  border-radius: 4px;
+  outline: transparent;
+  border: 1px solid transparent;
+  color: var(--total-white);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-button:hover,
+.modal-form-button:focus,
+.modal-form-button:active {
+  color: var(--accent-color);
+  background-color: var(--total-white);
+  border: 1px solid var(--accent-color);
+}

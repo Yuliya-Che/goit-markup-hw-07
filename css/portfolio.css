@@ -1,0 +1,140 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+/* Добавлляет класс для скрытия элемента верстки на странице */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.buttons {
+  padding-top: 93px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+/*Визуально выделяет неактивные кнопки - временный стиль*/
+.btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--primary-color);
+  background-color: var(--light-background-color);
+  max-width: 145px;
+  padding: 6px 22px;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Добавляет ховер-эффект кнопкам в Портфолио */
+.btn:hover,
+.btn:focus,
+.btn:active {
+  color: var(--total-white);
+  background-color: var(--accent-color);
+  border-width: 1px;
+  border-color: transparent;
+  outline: none;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+.buttons-list {
+  display: flex;
+  justify-content: center;
+}
+.buttons-list .item + .item {
+  margin-left: 8px;
+}
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0px;
+  padding-bottom: 94px;
+}
+.projects-item {
+  max-width: 370px;
+  border: 1px solid #eeeeee;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Стилизирует анимацию */
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  padding: 63px 24px;
+  margin: 0;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--total-white);
+
+  transform: translatey(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-item:hover .overlay {
+  transform: translatey(0);
+}
+
+.projects-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.projects-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+.project-name,
+.project-detalization {
+  margin: 0;
+}
+.project-name {
+  padding: 20px 24px 4px;
+}
+.project-detalization {
+  padding: 0px 24px 20px;
+}
+/* Добавляет ховер и фокус тени для карточек проектов */
+.projects-item:hover,
+.projects-item:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+/*Стилизирует h2-заголовки в секции с названиями проектов студии*/
+.project-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-color);
+}
+/*Стилизирует h3-заголовки в секции с детализацией проектов студии*/
+.project-detalization {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
